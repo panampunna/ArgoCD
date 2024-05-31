@@ -1,25 +1,26 @@
 
 
-Demo_argo-cd_Full_Install () {
+## Demo_argo-cd_Full_Install () {
 
                    # Check if the first argument (tag) is provided
     if [ -z "$1" ]; then
         echo "Error: Tag is required. Usage: Demo_argo-cd_Full_Install <tag>"
-        return 1
+         exit 1
     fi
 
         a="$1"
 
-        echo "1: Create Docker Images for UI and Postgres DB with Tags  "
-        cd /home/john/Vimal/2023-ubuntu/Shell-Scripts/INSTALL-Packages
-        /home/john/Vimal/2023-ubuntu/Shell-Scripts/INSTALL-Packages/./docker-install.sh
+        # Get the directory of the current script
+        SCRIPT_DIR=$(dirname "$0")
+        "$SCRIPT_DIR/./docker-install.sh"
          echo -e " \n\n\n 🧑👨  🎅 🏌  🐂🐄🐎🐖🐏🐑🦙🐐🦌🫎🐕    "
-        /home/john/Vimal/2023-ubuntu/Shell-Scripts/INSTALL-Packages/./minikube-install.sh
+        "$SCRIPT_DIR/./minikube-install.sh"
          echo -e " \n\n\n "
-        /home/john/Vimal/2023-ubuntu/Shell-Scripts/INSTALL-Packages/./kubectl-install.sh
+        "$SCRIPT_DIR/./kubectl-install.sh"
          echo -e " \n\n\n "
-        /home/john/Vimal/2023-ubuntu/Shell-Scripts/INSTALL-Packages/./helm-install.sh
+        "$SCRIPT_DIR/./helm-install.sh"
         echo "GitOps need to install \n\n\n 🐓🦃🦤🦚🦜🦢🪿🦩 "
+        
         minikube start  &
         echo "2: Create Helm Charts : https://github.com/panampunna/Helm-Kubectl-demo  any change in this repo will deploy new build     \n\n\n  🍅🍆🥑🥦🫛🥬🥒🌶 🫑🌽 "
 
@@ -40,5 +41,5 @@ Demo_argo-cd_Full_Install () {
 
         argo_Install_Only-kubectl_installed
 
-
+## }
 

@@ -15,3 +15,5 @@ All instalations are running in shell scripts and Aliases.
 
 ###########################################################################
 
+Demo_argo-cd_Full_Install
+
