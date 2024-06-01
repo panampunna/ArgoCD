@@ -1,5 +1,5 @@
 
-argo_Install_Only-kubectl_installed () {
+###argo_Install_Only-kubectl_installed () {
 ####         argo_Kubernetes_Install
         kubectl create namespace argocd
         kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
@@ -83,6 +83,6 @@ argo_Install_Only-kubectl_installed () {
         kubectl get service -A &
 
 
-}
+##}
 
 

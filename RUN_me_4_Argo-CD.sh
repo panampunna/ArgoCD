@@ -44,18 +44,17 @@ pwd
 ## /home/john/Vimal/ArgoCD/ArgoCD_Shell-Scripts/gitopscli 
 #  folder gitopscli will be created 
 #
-
+"$SCRIPT_DIR/ArgoCD_Shell-Scripts/Install_Argo-CD_in_kubectl.sh"
 
 #       cd /home/john/Vimal
 #       git clone https://github.com/panampunna/Helm-Kubectl-demo.git
 
-        GitOpsCLI_Install
-        GitOpsCLI_deploy_values-yaml_demo-argo-helm-db "$a"
-        GitOpsCLI_deploy_Chart-yaml_demo-argo-helm-db
-        GitOpsCLI_deploy_values-yaml_demo-argo-helm-ui "$a"
-        GitOpsCLI_deploy_Chart-yaml_demo-argo-helm-ui
+    #    GitOpsCLI_deploy_values-yaml_demo-argo-helm-db "$a"
+    #    GitOpsCLI_deploy_Chart-yaml_demo-argo-helm-db
+    #    GitOpsCLI_deploy_values-yaml_demo-argo-helm-ui "$a"
+    #    GitOpsCLI_deploy_Chart-yaml_demo-argo-helm-ui
 
-        argo_Install_Only-kubectl_installed
+     #   argo_Install_Only-kubectl_installed
 
 
 

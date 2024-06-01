@@ -12,7 +12,10 @@
                          sudo dpkg -i minikube_latest_amd64.deb
                 echo "2.1   #################     minikube start    ############################# "
                         sleep 81
-                            minikube start
+                            minikube start &
+			    echo "###   sudo chmod 666 /var/run/docker.sock   ############################################## "
+                sudo chmod 666 /var/run/docker.sock
+
                 echo "####=================================================================================##### "
                     rm minikube_latest_amd64.deb
                     echo -e "Minikube has been installed.  🍇    🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑   /n/n "
