@@ -23,13 +23,12 @@ pwd
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/kubectl-install.sh"
 ## echo  -e "  Going to instrall minikube  If not installed  "
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/minikube-install.sh"
+ sleep 100 
 
 ## echo  -e "  Going to instrall helm-install  If not installed  "
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/helm-install.sh"
 
         
-	minikube start  &
-
 
 	echo "2: Create Helm Charts : https://github.com/panampunna/Helm-Kubectl-demo  any change in this repo will deploy new build (( Public repo))  \n\n\n "
 
