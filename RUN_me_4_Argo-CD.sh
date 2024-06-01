@@ -27,10 +27,35 @@ pwd
 ## echo  -e "  Going to instrall helm-install  If not installed  "
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/helm-install.sh"
 
+        
+	minikube start  &
 
 
+	echo "2: Create Helm Charts : https://github.com/panampunna/Helm-Kubectl-demo  any change in this repo will deploy new build (( Public repo))  \n\n\n "
+
+        echo "3: Create Argo-CD : and deploy :: https://hub.docker.com/repository/docker/vimaldevops/flask_app/general  new imange tags (( Public repo)) \n\n\n "
+
+    ##########  Demo_argo-cd_step_1 $a
+        echo "4:   GitOps to change Helm Char =  GitOpsCLI_Install  \n\n\n   "
+
+  ## echo  -e "  Going to instrall helm-install  If not installed  "
+"$SCRIPT_DIR/ArgoCD_Shell-Scripts/GitOpsCLI_Install.sh"
+
+## /home/john/Vimal/ArgoCD/ArgoCD_Shell-Scripts/gitopscli 
+#  folder gitopscli will be created 
+#
 
 
+#       cd /home/john/Vimal
+#       git clone https://github.com/panampunna/Helm-Kubectl-demo.git
+
+        GitOpsCLI_Install
+        GitOpsCLI_deploy_values-yaml_demo-argo-helm-db "$a"
+        GitOpsCLI_deploy_Chart-yaml_demo-argo-helm-db
+        GitOpsCLI_deploy_values-yaml_demo-argo-helm-ui "$a"
+        GitOpsCLI_deploy_Chart-yaml_demo-argo-helm-ui
+
+        argo_Install_Only-kubectl_installed
 
 
 
