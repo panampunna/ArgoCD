@@ -23,7 +23,6 @@ pwd
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/kubectl-install.sh"
 ## echo  -e "  Going to instrall minikube  If not installed  "
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/minikube-install.sh"
- sleep 100 
 
 ## echo  -e "  Going to instrall helm-install  If not installed  "
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/helm-install.sh"
@@ -44,6 +43,9 @@ pwd
 #  folder gitopscli will be created 
 #
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/Install_Argo-CD_in_kubectl.sh"
+
+"$SCRIPT_DIR/ArgoCD_Shell-Scripts/Add_repo_2_ArgoCD.sh"
+
 
 #       cd /home/john/Vimal
 #       git clone https://github.com/panampunna/Helm-Kubectl-demo.git
