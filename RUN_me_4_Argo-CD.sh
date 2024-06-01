@@ -56,7 +56,7 @@ pwd
     #    GitOpsCLI_deploy_Chart-yaml_demo-argo-helm-ui
 
      #   argo_Install_Only-kubectl_installed
-
-
+  kubectl get service -n default
+ 
 
 
