@@ -28,8 +28,6 @@ pwd
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/helm-install.sh"
 
         
-	minikube start  &
-
 
 	echo "2: Create Helm Charts : https://github.com/panampunna/Helm-Kubectl-demo  any change in this repo will deploy new build (( Public repo))  \n\n\n "
 
@@ -45,6 +43,9 @@ pwd
 #  folder gitopscli will be created 
 #
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/Install_Argo-CD_in_kubectl.sh"
+
+"$SCRIPT_DIR/ArgoCD_Shell-Scripts/Add_repo_2_ArgoCD.sh"
+
 
 #       cd /home/john/Vimal
 #       git clone https://github.com/panampunna/Helm-Kubectl-demo.git

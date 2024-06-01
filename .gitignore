@@ -11,3 +11,8 @@ temp/
 
 # Ignore a specific file
 *.swp
+
+argocd-linux-amd64
+gitopscli/*
+
+
