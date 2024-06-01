@@ -1,4 +1,5 @@
-echo -e "\n ##############               Starting  Add_repo_2_ArgoCD.sh  ##############  \n \n  "
+echo -e "\n 🍏🍎🍐🍊🍋🍌🍉🍇🍓🍈🍒🍑🥭🥥🥝🥨🥖🍞🥯🥐🍠🥔🥕🌽🌶 🥒🥬🥦🥑🍆🍅🧀🥚🍳🥞🥓🥩🍗🍖🦴🌭🍔🍟🍕🥪🥙🌮🍥🍘🍚🥟🍤🍣🍛🍲🍜🍝🥫🥘🥗🌯🥠🥮🍢🍡🍨🍦🥧🧁🧁🍰🎂🍮
+🍭🍬🍫🍿🥃🍷🥂🍻🍶🥤🍼🍯🥜🌰🍪🍩🍸🍹🍾🍴🍽 🥣🧂           \n    Starting  Add_repo_2_ArgoCD.sh  ##############   \n  "
 
 
 echo -e " to add repo to argo    argocd repo add https://github.com/panampunna/Helm-Kubectl-demo.git "
@@ -14,7 +15,7 @@ echo -e " to add repo to argo    argocd repo add https://github.com/panampunna/H
         argocd app list
 
 ###################################################################
-        echo -e "######################### \n     "
+        echo -e "###🐆🦓🦍🐘🦛🦏🐪🐫🦒🦘🐃🐂🐄🐎🐏🐅🦝🐇🕊 🦢🦜🦃🦚🐓🐈🐩🐕🦌🐐🐿   \n     "
 
 ###########################
               echo -e " argocd app create argocd-app-db --repo  https://github.com/panampunna/Helm-Kubectl-demo.git  --path Demo_argo-cd_helm-chart-db/ --dest-server https://kubernetes.default.svc --dest-namespace default  "
