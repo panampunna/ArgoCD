@@ -5,7 +5,7 @@
 #GitOpsCLI_Install() {
         echo " https://baloise.github.io/gitopscli/setup/  "
         echo    "https://www.youtube.com/watch?v=f5EpcWp0THw "
-	sudo apt install python3-poetry
+	sudo apt install python3-poetry  -y 
         git clone https://github.com/baloise/gitopscli.git
         cd gitopscli/
         poetry install

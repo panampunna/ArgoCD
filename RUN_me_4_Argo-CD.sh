@@ -4,14 +4,15 @@
        	echo "Welcome $(whoami)"
         echo "You are using $(cat /etc/issue)"
 
-                # Check if the first argument (tag) is provided
-    if [ -z "$1" ]; then
-        echo "Error: Tag is required. Usage: Demo_argo-cd_Full_Install <tag>"
-        return 1
-    fi
-
-        a="$1"
-	echo "Tag is $1"
+#                # Check if the first argument (tag) is provided
+#    if [ -z "$1" ]; then
+#        echo "Error: Tag is required. Usage: Demo_argo-cd_Full_Install <tag>"
+#        return 1
+#    fi
+#
+#        a="$1"
+#	echo "Tag is $1"
+#
 # Get the directory of the current script
 SCRIPT_DIR=$(dirname "$0")
 echo -e "$SCRIPT_DIRi"
@@ -36,13 +37,15 @@ pwd
     ##########  Demo_argo-cd_step_1 $a
         echo "4:   GitOps to change Helm Char =  GitOpsCLI_Install  \n\n\n   "
 
-  ## echo  -e "  Going to instrall helm-install  If not installed  "
+  echo  -e "  Going to run /ArgoCD_Shell-Scripts/GitOpsCLI_Install.sh  after 20 sec  "
+  sleep 20 
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/GitOpsCLI_Install.sh"
 
 ## /home/john/Vimal/ArgoCD/ArgoCD_Shell-Scripts/gitopscli 
 #  folder gitopscli will be created 
-#
+echo  -e "  Going to run /ArgoCD_Shell-Scripts/Install_Argo-CD_in_kubectl.sh"
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/Install_Argo-CD_in_kubectl.sh"
+echo  -e "  Going to run  ArgoCD_Shell-Scripts/Add_repo_2_ArgoCD.sh"
 
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/Add_repo_2_ArgoCD.sh"
 
