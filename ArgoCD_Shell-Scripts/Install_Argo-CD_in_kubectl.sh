@@ -45,7 +45,7 @@
          export ARGOCD_SERVER_POD_NAME=$(kubectl get pods -n argocd -l "app.kubernetes.io/name=argocd-server" -o jsonpath="{.items[0].metadata.name}")
 
         kubectl -n argocd exec -it $ARGOCD_SERVER_POD_NAME -- argocd admin initial-password
-        read -s -p "\n\n\n  Enter your password: " password
+        read -s -p "\n\n  Enter your password: " password
         echo "########################################### "
         echo "L 205 :::  You entered: $password"
         echo "########################################### "
@@ -57,7 +57,7 @@
 ######################################################################################
         echo -e " to add repo to argo    argocd repo add https://github.com/panampunna/Helm-Kubectl-demo.git "
         argocd repo add https://github.com/panampunna/Helm-Kubectl-demo.git
-        echo -e " \n argocd repo list   \n  "
+        echo -e " \n argocd repo list :::  Line 60::  \n  "
         argocd repo list
 
 
@@ -65,7 +65,7 @@
         argocd app create demo-argo-helm-ui --repo  https://github.com/panampunna/Helm-Kubectl-demo.git  --path demo-argo-helm-ui/ --dest-server https://kubernetes.default.svc --dest-namespace default
         argocd app get demo-argo-helm-ui
         argocd app sync demo-argo-helm-ui
-	echo -e " argocd app list "
+	echo -e " argocd app list   Line 68 ::  "
         argocd app list
 
 ###################################################################
@@ -78,11 +78,11 @@
         argocd app sync demo-argo-helm-db
         argocd app list
 
-        echo -e " argocd  UI  ################################### n\\n "
+        echo -e " argocd UI  ############################## Line 81 ::\n 🥒🥬🥦🥑🍆🍅🧀🥚🍳🥞🥓🥩🍗🍖🦴🌭🍔🍟🍕🥪🥙🌮🍥🍘🍚🥟🍤🍣🍛🍲🍜🍝🥫🥘🥗🌯🥠🥮🍢🍡🍨🍦🥧  \n  "
         chromium-browser http://localhost:8080/login  &
         minikube tunnel &
         kubectl get service -A &
 
-	echo  "  🍏🍎🍐🍊🍋🍌🍉🍇🍓🍈🍒🍑🥭🥥🥝🥨🥖🍞🥯🥐🍠🥔🥕🌽🌶🥒🥬🥦🥑🍆🍅🧀🥚🍳🥞🥓🥩🍗🍖🦴🌭🍔🍟🍕🥪🥙🌮🍥🍘🍚🥟🍤🍣🍛🍲🍜🍝🥫🥘🥗🌯🥠🥮🍢🍡🍨🍦🥧🧁🧁🍰🎂🍮🍭🍬🍫🍿🥃🍷🥂🍻🍶🥤🍼🍯🥜🌰🍪🍩🍸🍹🍾🍴🍽🥣🧂 \n ##############END ################### \n END of Install_Argo-CD_in_kubectl.sh  \n "
+	echo  "  🍏🍎🍐🍊🍋🍌🍉🍇🍓🍈🍒🍑🥭🥥🥝🥨🥖🍞🥯🥐🍠🥔🥕🌽🌶🥒🍦🥧🧁🧁🍰🎂🍮🍭🍬🍫🍿🥃🍷🥂🍻🍶🥤🍼🍯🥜🌰🍪🍩🍸🍹🍾🍴🍽🥣🧂 \n ##############END ################### \n END of Install_Argo-CD_in_kubectl.sh  \n "
 
 
