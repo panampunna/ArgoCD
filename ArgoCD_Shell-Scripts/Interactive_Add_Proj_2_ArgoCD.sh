@@ -62,9 +62,11 @@ echo -e "The Dest_Namespace entered is: $Dest_Namespace"
 
   argocd app create $Application_Name  --repo  $Repo_Name  --path $Repo_path --dest-server $Dest_Server --dest-namespace $Dest_Namespace
 
+ echo  -e " argocd app list "
+ argocd app list
 
-
-
+ echo -e "argocd proj -h  " 
+argocd proj list
 
 
 
