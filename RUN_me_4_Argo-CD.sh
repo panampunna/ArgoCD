@@ -37,9 +37,10 @@ pwd
     ##########  Demo_argo-cd_step_1 $a
         echo "4:   GitOps to change Helm Char =  GitOpsCLI_Install  \n\n\n   "
 
-  echo  -e "  Going to run /ArgoCD_Shell-Scripts/GitOpsCLI_Install.sh  after 100 sec  "
-  sleep 100 
-"$SCRIPT_DIR/ArgoCD_Shell-Scripts/GitOpsCLI_Install.sh"
+  	echo  -e "  Going to run /ArgoCD_Shell-Scripts/GitOpsCLI_Install.sh  after 100 sec  "
+	"$SCRIPT_DIR/ArgoCD_Shell-Scripts/are_all_pods_running.sh"
+  	sleep 100 
+	"$SCRIPT_DIR/ArgoCD_Shell-Scripts/GitOpsCLI_Install.sh"
 
 ## /home/john/Vimal/ArgoCD/ArgoCD_Shell-Scripts/gitopscli 
 #  folder gitopscli will be created 
