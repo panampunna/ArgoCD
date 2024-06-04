@@ -3,13 +3,13 @@
 ####         argo_Kubernetes_Install
         kubectl create namespace argocd
         kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-        echo -e "  \n  sleep 100   🍇    🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑    \n "
-        sleep 30
+        echo -e "  \n  sleep 100   🍇    🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑  , need time to create the pods   \n "
+        sleep 100
         echo -e " \n\n\n\n\n  kubectl get pods -A    "
         kubectl get pods -A
         echo -e " kubectl get services -A    "
         kubectl get services -A
-        echo -e " \n\n\n\n\n  kubectl get services -A | grep argocd-server  "
+        echo -e " \n\n  kubectl get services -A | grep argocd-server \n\n "
         kubectl get services -A | grep argocd-server
 
         echo -e "\n\n\n   kubectl port-forward svc/argocd-server -n argocd 8080:443 &   "
@@ -18,17 +18,17 @@
         kubectl get pods -n argocd -l "app.kubernetes.io/name=argocd-server" -o jsonpath="{.items[0].metadata.name}"
         export ARGOCD_SERVER_POD_NAME=$(kubectl get pods -n argocd -l "app.kubernetes.io/name=argocd-server" -o jsonpath="{.items[0].metadata.name}")
         echo -e "$ARGOCD_SERVER_POD_NAME    \n\n\n "
-        echo -e " argocd  PASSWORD for admin user from POD  == argocd admin initial-password -n argocd    \n\n\n "
+        echo -e " argocd  PASSWORD for admin user from POD  == argocd admin initial-password -n argocd  \n ##################################### "
         kubectl -n argocd exec -it $ARGOCD_SERVER_POD_NAME -- argocd admin initial-password
-
+	echo -e " ##################################################################"
         echo -e " sleep 10 🐆🦓🦍🐘🦛🦏🐪🐫🦒🦘🐃🐂🐄🐎🐏🐅🦝🐇🕊🦢🦜🦃🦚🐓🐈🐩🐕🦌🐐🐿  "
         sleep 10
 
-        echo -e "\n\n\n ################### \n\n  user =  admin   ||  password above line     "
+        echo -e "\n\n\n ################### \n\n  user =  admin   ||  password above line ########################   "
 # kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'   ##  need to find this line use
 
 #       chromium-browser http://localhost:8080/login  &
-        echo -e " \n\n\n\n\n ########################### argo-cd CLI install  \n\n 🐣🐥🦆🦅🦉🐠🐟🐬🐳🐋🦈🐊🦑🐙  \n  "
+        echo -e " \n\n\n ########################### argo-cd CLI install   🐣🐥🦆🦅🦉🐠🐟🐬🐳🐋🦈🐊🦑🐙  \n\n  "
         curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
 
 
@@ -47,7 +47,7 @@
         kubectl -n argocd exec -it $ARGOCD_SERVER_POD_NAME -- argocd admin initial-password
         read -s -p "\n\n  Enter your password: " password
         echo "########################################### "
-        echo "L 205 :::  You entered: $password"
+        echo "Line 50 :::  You entered: $password"
         echo "########################################### "
 
         argocd login localhost:8080 --username admin --password $password   --insecure   ###
