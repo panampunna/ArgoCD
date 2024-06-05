@@ -3,8 +3,9 @@
 ####         argo_Kubernetes_Install
         kubectl create namespace argocd
         kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-        echo -e "  File =Install_Argo-CD_in_kubectl.sh    🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑  , Check all pods are running    \n "
-          "./are_all_pods_running.sh"
+        echo -e " Line 6 ::  File =Install_Argo-CD_in_kubectl.sh    🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑  , Check all pods are running    \n "
+	pwd 
+          "$local_path/ArgoCD/ArgoCD_Shell-Scripts/./are_all_pods_running.sh"
         echo -e " \n\n  kubectl get pods -A  🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑   "
         kubectl get pods -A
     #    echo -e " kubectl get services -A  🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑  "

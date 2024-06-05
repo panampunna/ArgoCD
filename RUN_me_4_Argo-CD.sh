@@ -37,7 +37,7 @@ pwd
     ##########  Demo_argo-cd_step_1 $a
         echo "4:   GitOps to change Helm Char =  GitOpsCLI_Install  \n\n\n   "
 
-  	echo  -e "  Going to run /ArgoCD_Shell-Scripts/GitOpsCLI_Install.sh  after 100 sec  "
+  	echo  -e "  Going to run /ArgoCD_Shell-Scripts/GitOpsCLI_Install.sh  after 100 sec , DPKG lock will come so need to wait   "
 	"$SCRIPT_DIR/ArgoCD_Shell-Scripts/are_all_pods_running.sh"
   	sleep 100 
 	"$SCRIPT_DIR/ArgoCD_Shell-Scripts/GitOpsCLI_Install.sh"
