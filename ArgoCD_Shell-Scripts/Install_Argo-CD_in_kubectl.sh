@@ -3,18 +3,18 @@
 ####         argo_Kubernetes_Install
         kubectl create namespace argocd
         kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-        echo -e "  \n  sleep 100   🍇    🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑  , need time to create the pods   \n "
-        sleep 100
-        echo -e " \n\n\n\n\n  kubectl get pods -A    "
+        echo -e "  File =Install_Argo-CD_in_kubectl.sh    🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑  , Check all pods are running    \n "
+          "./are_all_pods_running.sh"
+        echo -e " \n\n  kubectl get pods -A  🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑   "
         kubectl get pods -A
-        echo -e " kubectl get services -A    "
-        kubectl get services -A
+    #    echo -e " kubectl get services -A  🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑  "
+    #    kubectl get services -A
         echo -e " \n\n  kubectl get services -A | grep argocd-server \n\n "
         kubectl get services -A | grep argocd-server
 
-        echo -e "\n\n\n   kubectl port-forward svc/argocd-server -n argocd 8080:443 &   "
+        echo -e "\n\n   kubectl port-forward svc/argocd-server -n argocd 8080:443 &   "
         kubectl port-forward svc/argocd-server -n argocd 8080:443 &
-        echo -e "\n\n\n    kubectl pod name that run argocd-server- POD  🐆🦓🦍🐘🦛🦏🐪🐫🦒🦘🐃🐂🐄🐎🐏🐅🦝🐇🕊🦢🦜🦃🦚🐓🐈🐩🐕🦌🐐🐿  \n\n\n  "
+        echo -e "\n\n    kubectl pod name that run argocd-server- POD  🐆🦓🦍🐘🦛🦏🐪🐫🦒🦘🐃🐂🐄🐎🐏🐅🦝🐇🕊🦢🦜🦃🦚🐓🐈🐩🐕🦌🐐🐿  \n  "
         kubectl get pods -n argocd -l "app.kubernetes.io/name=argocd-server" -o jsonpath="{.items[0].metadata.name}"
         export ARGOCD_SERVER_POD_NAME=$(kubectl get pods -n argocd -l "app.kubernetes.io/name=argocd-server" -o jsonpath="{.items[0].metadata.name}")
         echo -e "$ARGOCD_SERVER_POD_NAME    \n\n\n "
