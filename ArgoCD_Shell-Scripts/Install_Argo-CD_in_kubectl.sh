@@ -1,15 +1,15 @@
-
 ###argo_Install_Only-kubectl_installed () {
-####         argo_Kubernetes_Install
-        kubectl create namespace argocd
+      	echo -e " Line 4 ::  File =Install_Argo-CD_in_kubectl.sh  "
+	kubectl create namespace argocd
         kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-        echo -e " Line 6 ::  File =Install_Argo-CD_in_kubectl.sh    🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑  , Check all pods are running    \n "
-	pwd 
-          "$local_path/ArgoCD/ArgoCD_Shell-Scripts/./are_all_pods_running.sh"
+        echo -e " Line 7 ::  🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑  , Check all pods are running    \n "
+      echo -e  "wget https://raw.githubusercontent.com/panampunna/ArgoCD/develop/ArgoCD_Shell-Scripts/are_all_pods_running.sh"
+	wget https://raw.githubusercontent.com/panampunna/ArgoCD/develop/ArgoCD_Shell-Scripts/are_all_pods_running.sh
+	sudo chmod +x are_all_pods_running.sh
+       "./are_all_pods_running.sh"
+
         echo -e " \n\n  kubectl get pods -A  🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑   "
         kubectl get pods -A
-    #    echo -e " kubectl get services -A  🍇  🍈 🍉  🍊 🍋  🍍 🥭  🍎  🍏 🍐 🍑  "
-    #    kubectl get services -A
         echo -e " \n\n  kubectl get services -A | grep argocd-server \n\n "
         kubectl get services -A | grep argocd-server
 

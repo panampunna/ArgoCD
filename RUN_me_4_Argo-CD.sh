@@ -15,7 +15,7 @@
 #
 # Get the directory of the current script
 SCRIPT_DIR=$(dirname "$0")
-echo -e "$SCRIPT_DIRi"
+echo -e " SCRIPT_DIR ==   $SCRIPT_DIR"
 pwd
 ## echo  -e " Going to instrall docker If not installed   " 
 "$SCRIPT_DIR/ArgoCD_Shell-Scripts/docker-install.sh"
